@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminitrix - Administração Inteligente</title>
+
+    <style>
+        /* Importação da fonte */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Reset e estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #2c3e50;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e67e22;
+        }
+
+        /* Seção Hero */
+        .hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.8em;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #e67e22;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #d35400;
+            transform: scale(1.05);
+        }
+
+        /* Animação */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .about img {
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Serviços */
+        .services {
+            background: #ecf0f1;
+            padding: 80px 20px;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .services li {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .services li:hover {
+            transform: scale(1.05);
+        }
+
+        .services li h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .service-description {
+            display: none;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #34495e;
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contact {
+            background: url('contact.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 80px 20px;
+        }
+
+        .contact p {
+            font-size: 1.3em;
+        }
+
+        .contact .social a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px 20px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .contact .social a:hover {
+            background: rgba(0, 0, 0, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* Rodapé */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+
+    <script>
+        function toggleDescription(id) {
+            var element = document.getElementById(id);
+            element.style.display = element.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Adminitrix</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Administração Inteligente para o seu Sucesso</h2>
+        <p>Transformamos desafios em soluções eficientes para o seu negócio.</p>
+        <a href="#contato" class="btn">Entre em Contato</a>
+    </section>
+
+    <section id="sobre" class="about">
+        <h2>Sobre a Adminitrix</h2>
+        <p>A Adminitrix é uma empresa especializada em gestão administrativa, oferecendo soluções inovadoras para otimizar processos empresariais.</p>
+        <p><strong>Fundadores:</strong> Davy Amaral, Bianca Martins e Douglas.</p>
+        <img src="about.jpg" alt="Equipe Adminitrix">
+    </section>
+
+    <section id="servicos" class="services">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li onclick="toggleDescription('financeiro')">
+                <h3>📊 Gestão Financeira</h3>
+                <div id="financeiro" class="service-description">
+                    <p>Controle financeiro para empresas, ajudando a otimizar gastos e gerar lucros de forma inteligente. Monitoramento de fluxo de caixa, balanços e planejamento fiscal.</p>
+                    <p><strong>Artigos relacionados:</strong> <a href="#">Como planejar seu fluxo de caixa?</a></p>
+                </div>
+            </li>
+            <li onclick="toggleDescription('consultoria')">
+                <h3>📈 Consultoria Empresarial</h3>
+                <div id="consultoria" class="service-description">
+                    <p>Consultoria estratégica e personalizada para otimizar processos, aumentar a competitividade e alavancar o crescimento da sua empresa. Foco em inovação e expansão de mercado.</p>
+                    <p><strong>Estudos de caso:</strong> <a href="#">Consultoria para empresas de pequeno porte</a></p>
+                </div>
+            </li>
+            <li onclick="toggleDescription('planejamento')">
+                <h3>📝 Planejamento Estratégico</h3>
+                <div id="planejamento" class="service-description">
+                    <p>Criação de planos estratégicos que alinham a visão da sua empresa com objetivos de longo prazo. Definição de metas e acompanhamento de resultados para atingir as metas propostas.</p>
+                    <p><strong>Artigos relacionados:</strong> <a href="#">A importância do planejamento estratégico</a></p>
+                </div>
+            </li>
+            <li onclick="toggleDescription('automacao')">
+                <h3>⚙️ Automação de Processos</h3>
+                <div id="automacao" class="service-description">
+                    <p>Implementação de soluções tecnológicas para automatizar processos, reduzir erros humanos e aumentar a eficiência operacional, resultando em economia e otimização de recursos.</p>
+                    <p><strong>Estudos de caso:</strong> <a href="#">Automatizando processos empresariais</a></p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contato" class="contact">
+        <h2>Entre em Contato</h2>
+        <p>Email: <a href="mailto:davyamaral07@gmail.com" style="color: #fff;">davyamaral07@gmail.com</a></p>
+        <p>Email: <a href="mailto:biancasmartins22@gmail.com" style="color: #fff;">biancasmartins22@gmail.com</a></p>
+        <p>Telefone: <a href="tel:+5561986360219" style="color: #fff;">+55 61 98636-0219</a></p>
+        <div class="social">
+            <a href="https://wa.me/5561986360219" target="_blank">WhatsApp</a>
+            <a href="https://instagram.com/antunes.dv" target="_blank">Instagram Davy</a>
+            <a href="https://instagram.com/douglas_bsb320" target="_blank">Instagram Douglas</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Adminitrix. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
